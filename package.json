@@ -1,0 +1,22 @@
+{
+  "name": "maca-assessment",
+  "version": "1.0.0",
+  "description": "A web app that allows an employee to submit required information for a purchase",
+  "main": "index.js",
+  "repository": "https://github.com/Smeks-ops/maca-assessment",
+  "author": "Osemeke Echenim",
+  "license": "MIT",
+  "private": true,
+
+  "scripts": {
+		"start": "concurrently \"wsrun --parallel start\""
+	},
+	"workspaces": [
+		"system/*"
+	],
+
+  "dependencies": {
+    "concurrently": "^7.4.0",
+    "wsrun": "^5.2.4"
+  }
+}
