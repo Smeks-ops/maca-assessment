@@ -1,0 +1,42 @@
+.Home {
+  margin-top: 150px;
+  padding: 0 20px;
+}
+
+.Home h1 {
+  text-align: center;
+}
+
+.Home .home-btns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Home button {
+  height: 50px;
+  width: 250px;
+  padding: 0 20px;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  margin-top: 30px;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 500;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.Home button:first-child {
+  background-color: var(--green);
+}
+
+.Home button:last-child {
+  background-color: var(--orange);
+}
+
+@media (max-width: 30rem) {
+  .Home.public-page {
+    margin-top: 80px;
+  }
+}
