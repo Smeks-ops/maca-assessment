@@ -53,6 +53,7 @@ export class ImageUploadService {
           if (exist) {
             return res.status(400).json({
               message: 'Purchase receipt already exists',
+              status: false,
             });
           }
 
@@ -68,12 +69,14 @@ export class ImageUploadService {
 
           return res.status(201).json({ 
             newFileUploadPayload,
-            message: 'File uploaded successfully' 
+            message: 'File uploaded successfully',
+            status: true,
+
           });
         }
       });
     } catch (error) {
-      return res.status(400).json({ message: error });
+      return res.status(400).json({ message: error, status: false });
     }
    
   }
