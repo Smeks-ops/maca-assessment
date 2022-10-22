@@ -17,6 +17,12 @@ export class UploadFilesDto {
   @IsDefined()
   @IsNotEmpty()
   @IsString()
+  purchaseName: string;
+
+  @ApiProperty()
+  @IsDefined()
+  @IsNotEmpty()
+  @IsString()
   amount: string;
 
   @ApiProperty()

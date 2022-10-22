@@ -19,10 +19,13 @@ export class FileUpload {
   @Column({ type: 'varchar', length: 300, nullable: false })
   fileURL: string;
 
-  @Column({ type: 'varchar', nullable: true, default: false })
+  @Column({ type: 'varchar', nullable: true, length: 300 })
   amount: string;
 
-  @Column({ type: 'varchar', nullable: true, default: false })
+  @Column({ type: 'varchar', nullable: true, length: 300 })
+  purchaseName: string;
+
+  @Column({ type: 'varchar', nullable: true, length: 300 })
   description: string;
 
   @Column()

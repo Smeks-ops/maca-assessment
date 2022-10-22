@@ -38,7 +38,7 @@ export class ImageUploadController {
   @ApiBody({
     schema: {
       type: 'object',
-      required: ['date', 'amount', 'description', 'file'],
+      required: ['date', 'amount', 'description', 'file', 'purchaseName'],
       properties: {
         file: {
           type: 'string',
@@ -47,6 +47,7 @@ export class ImageUploadController {
         date: {type: 'string', example: '2021-01-01'},
         amount: {type: 'string', example: '100'},
         description: {type: 'string', example: 'test'},
+        purchaseName: {type: 'string', example: 'Iphone'},
       },
     },
   })
@@ -71,22 +72,21 @@ export class ImageUploadController {
     );
   }
 
-  // @ApiOkResponse({
-  //   description: 'Get all uploaded files',
-  //   type: [UploadFilesDto],
-  // })
-  // @Get('all-uploads')
-  // getUploadedFiles(
-  //   @Query() params: GetUploadedFilesQuery,
-  //   @AuthUser() userId: string,
-  // ) {
-  //   const { offset = 0, limit = 10 } = params;
+  @ApiOkResponse({
+    description: 'Get all uploaded files',
+    type: [UploadFilesDto],
+  })
+  @Get('all-uploads')
+  getUploadedFiles(
+    @Query() params: GetUploadedFilesQuery,
+  ) {
+    const { offset = 0, limit = 10 } = params;
 
-  //   return plainToClass(
-  //     UploadFilesDto,
-  //     this.imageUploadService.getAllUploadedFiles(offset, limit),
-  //   );
-  // }
+    return plainToClass(
+      UploadFilesDto,
+      this.imageUploadService.getAllUploadedFiles(offset, limit),
+    );
+  }
 
 
 
