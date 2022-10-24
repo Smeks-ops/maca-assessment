@@ -81,13 +81,20 @@ export class ImageUploadService {
    
   }
 
-  async getAllUploadedFiles(offset: number, limit: number) {
+  async getAllUploadedFiles(offset: number, limit: number,
+    @Res() res,
+    ) {
 
-    const query = await this.fileUploadRepository
+    const v = await this.fileUploadRepository
       .createQueryBuilder('fileUpload')
       .skip(offset)
       .take(limit);
-    return query.getMany();
+      const data = await v.getMany();
+      return res.status(201).json({ 
+        data,
+        message: 'Purchase receipts retrieved successfully',
+        status: true,
+      });  
   }
 
 

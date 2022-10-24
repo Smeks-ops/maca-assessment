@@ -37,6 +37,7 @@ function FormPage() {
 
     APIService.createPurchaseEntry(newFormData)
       .then((res) => {
+        setLoading(false);
         if (res.status) {
           notify("success", res.message);
         } else {
@@ -44,6 +45,7 @@ function FormPage() {
         }
       })
       .catch((error) => {
+        setLoading(false);
         console.log(error);
         notify("error", "An error occured");
       });

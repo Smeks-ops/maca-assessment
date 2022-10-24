@@ -78,13 +78,14 @@ export class ImageUploadController {
   })
   @Get('all-uploads')
   getUploadedFiles(
+    @Res() response,
     @Query() params: GetUploadedFilesQuery,
   ) {
     const { offset = 0, limit = 10 } = params;
 
     return plainToClass(
       UploadFilesDto,
-      this.imageUploadService.getAllUploadedFiles(offset, limit),
+      this.imageUploadService.getAllUploadedFiles(offset, limit, response),
     );
   }
 
