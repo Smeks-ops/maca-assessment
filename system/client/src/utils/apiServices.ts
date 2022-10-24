@@ -11,7 +11,7 @@ class APIServices {
     return response.json();
   }
 
-  async getUploads(data: FormData) {
+  async getUploads() {
     const response = await fetch(`${baseURL}/api/v1/upload/all-uploads`, {
       method: "get",
     });

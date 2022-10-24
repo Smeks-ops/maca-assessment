@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { useForm, SubmitHandler, FieldValues } from "react-hook-form";
 import FormInput from "../../components/FormComponents/FormInput/FormInput";
 import FormTextarea from "../../components/FormComponents/FormTextarea/FormTextarea";
@@ -13,6 +14,7 @@ import notify from "../../helpers/notify";
 
 function FormPage() {
   const { register, handleSubmit, formState } = useForm();
+  const navigate = useNavigate();
 
   const [loading, setLoading] = useState(false);
 
@@ -40,6 +42,7 @@ function FormPage() {
         setLoading(false);
         if (res.status) {
           notify("success", res.message);
+          navigate("/uploads");
         } else {
           notify("error", res.message);
         }
