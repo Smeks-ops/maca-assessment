@@ -7,7 +7,7 @@ A mono repo web app that allows an employee to submit required information for a
 
 1. Clone this repository with this command
 ```bash
-# git clone https://github.com/Smeks-ops/maca-assessment.git
+git clone https://github.com/Smeks-ops/maca-assessment.git
 ```
 
 ## Installing the App
