@@ -1,5 +1,5 @@
 /* eslint-disable class-methods-use-this */
-const baseURL = "http://localhost:8080";
+const baseURL = "https://maca-assessment-be.herokuapp.com";
 
 class APIServices {
   async createPurchaseEntry(data: FormData) {
