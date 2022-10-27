@@ -94,7 +94,7 @@ function FormPage() {
           register={register}
           formState={formState}
           rules={{
-            required: "Enter Amount",
+            required: "Enter description",
           }}
         />
         <FormInput

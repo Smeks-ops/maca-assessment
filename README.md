@@ -29,11 +29,12 @@ npm run start or yarn start
 
 ```bash
 # unit tests
+cd system
+cd api-server
 $ npm run test
 
 # e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
+cd system
+cd client
+$ npx cypress open
 ```
