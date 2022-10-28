@@ -12,7 +12,7 @@ git clone https://github.com/Smeks-ops/maca-assessment.git
 
 ## Installing the App
 
-2. Install dependencies with this command in the home folder, the api-server folder and the client folder
+2. Install dependencies with this command in the home folder, the api-server folder and the client folder 
 
 ```bash
 npm install or yarn 
