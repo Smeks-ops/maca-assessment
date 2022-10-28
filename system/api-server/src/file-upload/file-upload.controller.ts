@@ -48,7 +48,7 @@ export class ImageUploadController {
         amount: {type: 'string', example: '100'},
         description: {type: 'string', example: 'test'},
         purchaseName: {type: 'string', example: 'Iphone'},
-      },
+      }, 
     },
   })
   @UseInterceptors(FileInterceptor('file'))
