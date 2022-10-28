@@ -38,7 +38,7 @@ export class ImageUploadController {
   @ApiBody({
     schema: {
       type: 'object',
-      required: ['date', 'amount', 'description', 'file', 'purchaseName'],
+      required: ['date', 'amount', 'description', 'file', 'purchaseName'], 
       properties: {
         file: {
           type: 'string',
