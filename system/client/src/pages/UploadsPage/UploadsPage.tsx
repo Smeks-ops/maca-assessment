@@ -18,7 +18,7 @@ function UploadsPage() {
 
   const [data, setData] = useState<DataType[] | [] >([]);
 
-  // const data = [
+  // const data = [ 
   //   {
   //     id: 1,
   //     purchasedName: "Samsung",
