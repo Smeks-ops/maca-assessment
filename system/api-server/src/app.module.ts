@@ -1,6 +1,4 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { getMetadataArgsStorage } from 'typeorm';
 import { ConfigModule } from '@nestjs/config';
@@ -30,7 +28,5 @@ import { ImageUploadModule } from './file-upload/file-upload.module';
     }),
     ImageUploadModule,
   ],
-  controllers: [AppController],
-  providers: [AppService],
 })
 export class AppModule {}
