@@ -33,7 +33,7 @@ export class ImageUploadService {
       Bucket: AWS_S3_BUCKET_NAME,
       Body: imageBuffer,
       Key: fileName,
-      ACL: 'public-read',
+      ACL: 'public-read', 
     };
 
     const v = this.fileUploadRepository;
