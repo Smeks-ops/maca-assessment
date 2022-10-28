@@ -15,7 +15,7 @@ AWS.config.update({
   secretAccessKey: SECRET_ACCESS_KEY,
 });
 
-@Injectable()
+@Injectable() 
 export class ImageUploadService {
   constructor(
     @InjectRepository(FileUpload)
