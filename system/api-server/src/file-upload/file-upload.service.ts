@@ -88,7 +88,7 @@ export class ImageUploadService {
     try {
       const v = await this.fileUploadRepository
       await v.find().then((data) => {
-        return res.status(201).json({ 
+        return res.status(200).json({ 
           data,
           message: 'Purchase receipts retrieved successfully',
           status: true,
