@@ -58,7 +58,7 @@ export class ImageUploadController {
     @Res() response,
   ) {
     if (!file) {
-      throw new BadRequestException('invalid file provided');
+      throw new BadRequestException('Invalid file provided');
     }
     if (file.size > 209715200) {
       throw new BadRequestException('File size too large');
