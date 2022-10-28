@@ -11,10 +11,10 @@ import {
 @Entity('file-upload')
 export class FileUpload {
   @PrimaryGeneratedColumn('uuid')
-  id: string;
+  id: string; 
 
   @Column({ type: 'varchar', length: 300, nullable: false })
-  date: string;
+  date: string; 
 
   @Column({ type: 'varchar', length: 300, nullable: false })
   fileURL: string;
