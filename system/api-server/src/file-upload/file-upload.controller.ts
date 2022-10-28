@@ -81,7 +81,7 @@ export class ImageUploadController {
     @Res() response,
     @Query() params: GetUploadedFilesQuery,
   ) {
-    const { offset = 0, limit = 10 } = params;
+    const { offset = 0, limit = 10 } = params; 
 
     return plainToClass(
       UploadFilesDto,
